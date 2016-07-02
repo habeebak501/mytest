@@ -1,0 +1,105 @@
+ls		lists files and directories within the current working directory
+ls -l		long lists of files and directories 
+ls -a		lists of files and directories with hidden files
+pwd		print working directory
+~(tilde)	home directory
+.(dot)		current directory 
+..(dotdot)	parent directory
+/		root folder
+cd		change directory
+file[path]	what type of file a particular file is
+\		backslash does is escape (or nullify) the special meaning of the next character.
+man <command>	manual pages with the following command
+q		exit from manual page
+mkdir		Make Directory
+rmdir		remove empty directory
+touch		create blank file
+cp		copy a file
+cp -r		copy directory
+mv		move a file or rename
+rm		remove a file
+rm -r		remove directory
+
+
+//vi Editor
+
+vi <file>	open editor
+i		insert mode
+Esc		back to edit mode
+w		save file
+ZZ		save and exit
+wq		again, save and exit
+q!		discard all changes, since the last save, and exit
+
+//
+
+
+cat <file>	view file
+<Ctrl> + c	cancel
+less <file>	allows you to move up and down within a file using the arrow keys
+
+
+//wildcard- path to turn it into a set of files or directories.
+
+*		represents zero or more characters
+?		represents a single character
+[]		represents a range of characters
+
+//
+
+
+chmod		change permission on file or directory
+
+
+//filter
+
+head		print the first 10 lines from file
+head -5		print the first 5 lines
+tail		print the last 10 lines from file
+tail -5		print the first 5 lines
+sort		sorted alphabetically
+nl		(set)number lines
+nl -s '. ' -w 10	
+-s 		specifies what should be printed after the number 
+-w 		specifies how much padding to put before the numbers	
+wc		word count (count of lines,words,characters)
+wc -l		count lines
+wc -w		count words
+wc -m		count characters
+cut		use if your content is separated into fields (columns) and you only want certain fields.
+cut -f 1 -d ', '
+-f 		option allows us to specify which field or fields we would like
+', '		The separator character may be anything you like, for instance in a CSV file the separator is typically a comma ( , )
+sed		Stream Editor and it effectively allows us to do a search and replace on our data
+s/search/replace/g
+s		substitute and specifies the action to perform
+g		global and is optional
+uniq		stands for unique and it's job is to remove duplicate lines from the data
+tac		cat in reverse
+
+//
+
+
+//Regular expressions are typically used to identify and manipulate specific pieces of data
+
+egrep		search a given set of data and print every line which contains a given pattern
+egrep -v   	tells grep to instead print every line which does not match the pattern.
+egrep -n	give no. of line also
+egrep -c	how many lines did match
+{n}		the preceding character matches exactly n times.
+{n,m}		the preceding character matches at least n times and not more than m times.
+[agd]		the character is one of those included within the square brackets.
+[^agd]		the character is not one of those included within the square brackets.
+[c-f]		the dash within the square brackets operates as a range. In this case it means either the letters c, d, e or f.
+|(pipe symbol)	the logical OR operation.
+^		matches the beginning of the line.
+$		matches the end of the line. 
+
+//
+
+
+//Piping and Redirection
+
+>		indicates to the command line that we wish the programs output to be saved in a file instead of printed to the screen
+>>		new data to be appended to the file
+
